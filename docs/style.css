@@ -24,6 +24,12 @@
     color: #fff;
 }
 
+.content p
+{
+    font-size: 35px;
+    font-weight: 400;
+}
+
 .content h1
 {
     font-size: 64px;
@@ -42,6 +48,30 @@
     outline: none;
     padding: 12px 25px;
     color: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.content button a
+{
+    color: #fff;
+}
+
+.content button img
+{
+    width: 15px;
+    margin-left: 10px;
+}
+
+.madeby button a
+{
+    background: transparent;
+    outline: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
     cursor: pointer;
 }
 
