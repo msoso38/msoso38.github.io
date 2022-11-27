@@ -66,6 +66,11 @@
     margin-left: 10px;
 }
 
+.madeby
+{
+    display: flex;
+}
+
 .madeby button a
 {
     background: transparent;
