@@ -1,1 +1,86 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Coming soon !</title><link href="style.css" rel="stylesheet" type="text/css"></head><body><div class="container"><div class="content"><p>Website Is Under Developement</p><h1>We're <span>Launching</span> Soon</h1><div class="launch-time"><div><p id="days">00</p><span>Days</span></div><div><p id="hours">00</p><span>Hours</span></div><div><p id="minutes">00</p><span>Minutes</span></div><div><p id="seconds">00</p><span>Seconds</span></div></div><button type="button"><a href="https://about.arexio.ml/">Learn More<img src="./images/triangle.png"></a></button><div class="madeby"><button type="button"><a href="https://youtube.com/@msoso38">Made by Msoso38<img src="./images/triangle.png"></a></button></div></div></div><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>marceaub.lat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <span class="logo">M</span>
+        <div>
+          <p>marceaub.lat</p>
+          <small>home server dashboard</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#gallery">Photos</a>
+        <a href="#interfaces">Interfaces</a>
+        <a href="#status">Status</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="status">
+        <h1>Minimal home server page</h1>
+        <p>Simple space for photos, quick access to your server interfaces, and a live server status indicator.</p>
+
+        <div class="status-card" data-state="loading">
+          <div>
+            <span class="status-label">Home server</span>
+            <strong id="server-status">Checking…</strong>
+          </div>
+          <p id="status-detail">Looking up your server status from the configured endpoint.</p>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <div class="section-header">
+          <h2>Photos</h2>
+          <p>Gallery of server and home setup photos. Replace the sample images with your own files in <code>docs/images/</code>.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure>
+            <img src="images/bg1.jpg" alt="Sample photo 1">
+            <figcaption>Photo 1</figcaption>
+          </figure>
+          <figure>
+            <img src="images/bg2.jpg" alt="Sample photo 2">
+            <figcaption>Photo 2</figcaption>
+          </figure>
+          <figure class="placeholder">
+            <div>
+              Add your own photo here by placing a file in <code>docs/images/</code> and updating this card.
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section id="interfaces">
+        <div class="section-header">
+          <h2>Server interfaces</h2>
+          <p>Open the tools you use most often on your IPv6-connected home server.</p>
+        </div>
+        <div class="link-grid">
+          <a href="https://grafana.marceaub.lat" target="_blank" rel="noopener">Grafana</a>
+          <a href="https://pufferpanel.marceaub.lat" target="_blank" rel="noopener">PufferPanel</a>
+          <a href="https://www.marceaub.lat" target="_blank" rel="noopener">Main domain</a>
+        </div>
+      </section>
+
+      <section class="note">
+        <p>This page is designed for a minimalistic personal server landing site. Edit <code>docs/script.js</code> to configure the exact status endpoint for your home server.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Published at <strong>www.marceaub.lat</strong></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,15 +1,54 @@
-var countDownDate = new Date("Apr 30, 2024 00:00:00").getTime();
-var x = setInterval(function(){
-    var now = new Date().getTime();
-    var distance = countDownDate - now;
+const config = {
+  statusUrl: 'https://marceaub.lat/status',
+  refreshMs: 20000,
+};
 
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+const statusLabel = document.getElementById('server-status');
+const statusDetail = document.getElementById('status-detail');
+const statusCard = document.querySelector('.status-card');
 
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
-}, 1000);
+async function checkServerStatus() {
+  statusLabel.textContent = 'Checking…';
+  statusDetail.textContent = `Checking ${config.statusUrl}`;
+  statusCard.dataset.state = 'loading';
+
+  try {
+    const response = await fetch(config.statusUrl, {
+      method: 'GET',
+      mode: 'cors',
+      cache: 'no-store',
+    });
+
+    if (!response.ok) {
+      statusLabel.textContent = 'Off';
+      statusCard.dataset.state = 'off';
+      statusDetail.textContent = `HTTP ${response.status} ${response.statusText}`;
+      return;
+    }
+
+    let data = null;
+    try {
+      data = await response.json();
+    } catch {
+      data = null;
+    }
+
+    const isOn = data?.status
+      ? String(data.status).toLowerCase().includes('on')
+      : true;
+
+    statusLabel.textContent = isOn ? 'On' : 'Off';
+    statusCard.dataset.state = isOn ? 'on' : 'off';
+    statusDetail.textContent = isOn
+      ? `Reachable at ${config.statusUrl}`
+      : `Server responded but status is not "on"`;
+  } catch (error) {
+    statusLabel.textContent = 'Off';
+    statusCard.dataset.state = 'off';
+    statusDetail.textContent = `Offline or blocked (${error.message})`;
+  }
+}
+
+checkServerStatus();
+setInterval(checkServerStatus, config.refreshMs);
+
