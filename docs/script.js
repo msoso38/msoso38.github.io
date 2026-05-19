@@ -26,6 +26,11 @@ const config = {
       url: 'http://server.marceaub.lat:8080',
     },
     {
+      title: 'Minecraft Server Domain',
+      description: 'Get my server domain at play.marceaub.lat',
+      url: 'play.marceaub.lat',
+    },
+    {
       title: 'Main Domain',
       description: 'Back to marceaub.lat',
       url: 'https://marceaub.lat',
