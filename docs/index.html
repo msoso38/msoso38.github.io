@@ -8,78 +8,59 @@
 </head>
 <body>
   <div class="site-shell">
-    <header class="topbar">
+    <header>
       <a class="brand" href="/">
-        <img class="brand-logo" src="images/logo.svg" alt="marceaub.lat logo">
+        <img class="brand-logo" src="images/logo.svg" alt="logo">
         <div class="brand-copy">
           <strong>marceaub.lat</strong>
-          <span>IPv6 server operations</span>
+          <span>Personal Server Hub</span>
         </div>
       </a>
-      <nav class="topnav">
+      <nav>
         <a href="#status">Status</a>
-        <a href="#gallery">Photos</a>
+        <a href="#gallery">Gallery</a>
         <a href="#interfaces">Links</a>
       </nav>
     </header>
 
     <main>
       <section class="hero" id="status">
-        <div class="hero-copy">
-          <p class="eyebrow">Server HQ</p>
-          <h1>Pro-grade home server dashboard</h1>
-          <p>Designed for clarity and speed: live status, Grafana monitoring, and a dynamic link gallery for your personal infrastructure.</p>
-          <div class="hero-tags">
-            <span>IPv6-ready</span>
-            <span>Grafana integration</span>
-            <span>PufferPanel access</span>
-          </div>
-        </div>
-
+        <h1>Control & monitoring for server.marceaub.lat</h1>
         <div class="hero-panels">
           <article class="panel status-panel">
             <div class="panel-head">
-              <span>Server status</span>
-              <strong id="server-status">Checking…</strong>
+              <span>Home Server</span>
+              <strong id="server-status">...</strong>
             </div>
-            <p id="status-detail">Fetching live health data from your configured endpoint.</p>
+            <p id="status-detail">Checking connection...</p>
           </article>
-
           <article class="panel grafana-panel">
             <div class="panel-head">
-              <span>Grafana watch</span>
-              <strong id="grafana-status">Loading…</strong>
+              <span>Grafana Health</span>
+              <strong id="grafana-status">...</strong>
             </div>
-            <p id="grafana-detail">Monitoring Grafana service availability in real time.</p>
+            <p id="grafana-detail">Port 3000 monitoring.</p>
           </article>
         </div>
       </section>
 
       <section class="section" id="gallery">
         <div class="section-heading">
-          <div>
-            <p class="eyebrow">Visual overview</p>
-            <h2>Dynamic photo gallery</h2>
-          </div>
-          <p>Use remote images or your own hosted photos. Everything is managed from <code>docs/script.js</code>.</p>
+          <h2>Gallery</h2>
         </div>
         <div class="grid gallery-grid" id="gallery-grid"></div>
       </section>
 
       <section class="section" id="interfaces">
         <div class="section-heading">
-          <div>
-            <p class="eyebrow">Direct launch</p>
-            <h2>Server interface shortcuts</h2>
-          </div>
-          <p>Fast access panels for Grafana, PufferPanel, and your main domain links.</p>
+          <h2>Interfaces</h2>
         </div>
         <div class="grid link-grid" id="link-grid"></div>
       </section>
     </main>
 
     <footer>
-      <p>Published at <strong>www.marceaub.lat</strong></p>
+      &copy; 2026 marceaub.lat &bull; IPv6 Operations
     </footer>
   </div>
   <script src="script.js"></script>
