@@ -7,72 +7,74 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="brand">
-        <span class="logo">M</span>
-        <div>
-          <p>marceaub.lat</p>
-          <small>home server dashboard</small>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="images/logo.svg" alt="marceaub.lat logo">
+        <div class="brand-copy">
+          <strong>marceaub.lat</strong>
+          <span>IPv6 server operations</span>
         </div>
-      </div>
-      <nav>
-        <a href="#gallery">Photos</a>
-        <a href="#interfaces">Interfaces</a>
+      </a>
+      <nav class="topnav">
         <a href="#status">Status</a>
+        <a href="#gallery">Photos</a>
+        <a href="#interfaces">Links</a>
       </nav>
     </header>
 
     <main>
       <section class="hero" id="status">
-        <h1>Minimal home server page</h1>
-        <p>Simple space for photos, quick access to your server interfaces, and a live server status indicator.</p>
-
-        <div class="status-card" data-state="loading">
-          <div>
-            <span class="status-label">Home server</span>
-            <strong id="server-status">Checking…</strong>
+        <div class="hero-copy">
+          <p class="eyebrow">Server HQ</p>
+          <h1>Pro-grade home server dashboard</h1>
+          <p>Designed for clarity and speed: live status, Grafana monitoring, and a dynamic link gallery for your personal infrastructure.</p>
+          <div class="hero-tags">
+            <span>IPv6-ready</span>
+            <span>Grafana integration</span>
+            <span>PufferPanel access</span>
           </div>
-          <p id="status-detail">Looking up your server status from the configured endpoint.</p>
         </div>
-      </section>
 
-      <section id="gallery">
-        <div class="section-header">
-          <h2>Photos</h2>
-          <p>Gallery of server and home setup photos. Replace the sample images with your own files in <code>docs/images/</code>.</p>
-        </div>
-        <div class="gallery-grid">
-          <figure>
-            <img src="images/bg1.jpg" alt="Sample photo 1">
-            <figcaption>Photo 1</figcaption>
-          </figure>
-          <figure>
-            <img src="images/bg2.jpg" alt="Sample photo 2">
-            <figcaption>Photo 2</figcaption>
-          </figure>
-          <figure class="placeholder">
-            <div>
-              Add your own photo here by placing a file in <code>docs/images/</code> and updating this card.
+        <div class="hero-panels">
+          <article class="panel status-panel">
+            <div class="panel-head">
+              <span>Server status</span>
+              <strong id="server-status">Checking…</strong>
             </div>
-          </figure>
+            <p id="status-detail">Fetching live health data from your configured endpoint.</p>
+          </article>
+
+          <article class="panel grafana-panel">
+            <div class="panel-head">
+              <span>Grafana watch</span>
+              <strong id="grafana-status">Loading…</strong>
+            </div>
+            <p id="grafana-detail">Monitoring Grafana service availability in real time.</p>
+          </article>
         </div>
       </section>
 
-      <section id="interfaces">
-        <div class="section-header">
-          <h2>Server interfaces</h2>
-          <p>Open the tools you use most often on your IPv6-connected home server.</p>
+      <section class="section" id="gallery">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Visual overview</p>
+            <h2>Dynamic photo gallery</h2>
+          </div>
+          <p>Use remote images or your own hosted photos. Everything is managed from <code>docs/script.js</code>.</p>
         </div>
-        <div class="link-grid">
-          <a href="https://grafana.marceaub.lat" target="_blank" rel="noopener">Grafana</a>
-          <a href="https://pufferpanel.marceaub.lat" target="_blank" rel="noopener">PufferPanel</a>
-          <a href="https://www.marceaub.lat" target="_blank" rel="noopener">Main domain</a>
-        </div>
+        <div class="grid gallery-grid" id="gallery-grid"></div>
       </section>
 
-      <section class="note">
-        <p>This page is designed for a minimalistic personal server landing site. Edit <code>docs/script.js</code> to configure the exact status endpoint for your home server.</p>
+      <section class="section" id="interfaces">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Direct launch</p>
+            <h2>Server interface shortcuts</h2>
+          </div>
+          <p>Fast access panels for Grafana, PufferPanel, and your main domain links.</p>
+        </div>
+        <div class="grid link-grid" id="link-grid"></div>
       </section>
     </main>
 
@@ -80,7 +82,6 @@
       <p>Published at <strong>www.marceaub.lat</strong></p>
     </footer>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>

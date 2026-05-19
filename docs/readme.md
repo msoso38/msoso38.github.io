@@ -1,9 +1,8 @@
-Minimal home server site for www.marceaub.lat.
+Minimal home server landing page for www.marceaub.lat.
 
-Use the `docs/` folder for the live website content and update `docs/script.js` with your own server status endpoint.
+To update the site:
+- edit the `config.galleryItems` array in `docs/script.js` to add or change photo cards
+- edit the `config.linkItems` array to add or remove interface links
+- edit `config.statusUrl` and `config.grafanaUrl` to point at your own server health and Grafana endpoints
 
-The site includes:
-- a simple photo gallery
-- quick interface links for Grafana, PufferPanel, and the main domain
-- a live home server status widget
-
+This site uses a dark HQ-like layout, no local photos are required, and the page is fully driven by `docs/script.js` data.
