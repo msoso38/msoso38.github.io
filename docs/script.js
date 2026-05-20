@@ -18,12 +18,12 @@ const config = {
     {
       title: 'Grafana',
       description: 'Metrics & Dashboards',
-      url: 'http://server.marceaub.lat:3000',
+      url: 'https://server.marceaub.lat:3000',
     },
     {
       title: 'PufferPanel',
       description: 'Game Server Management',
-      url: 'http://server.marceaub.lat:8080',
+      url: 'https://server.marceaub.lat:8080',
     },
     {
       title: 'Minecraft Server Domain',
@@ -33,7 +33,7 @@ const config = {
     {
       title: 'Main Domain',
       description: 'Back to marceaub.lat',
-      url: 'https://marceaub.lat',
+      url: 'https://www.marceaub.lat',
     },
   ],
 };
