@@ -1,6 +1,6 @@
 const config = {
-  statusUrl: 'http://server.marceaub.lat/status',
-  grafanaUrl: 'http://server.marceaub.lat:3000/api/health',
+  statusUrl: 'https://server.marceaub.lat/status',
+  grafanaUrl: 'https://server.marceaub.lat:3000/api/health',
   refreshMs: 15000,
   galleryItems: [
     {
