@@ -1,6 +1,6 @@
 const config = {
-  statusUrl: 'http://server.marceaub.lat/status',
-  grafanaUrl: 'http://server.marceaub.lat:3000/api/health',
+  statusUrl: 'https://server.marceaub.lat/status',
+  grafanaUrl: 'https://server.marceaub.lat:3000/api/health',
   refreshMs: 15000,
   galleryItems: [
     {
@@ -18,12 +18,17 @@ const config = {
     {
       title: 'Grafana',
       description: 'Metrics & Dashboards',
-      url: 'http://server.marceaub.lat:3000',
+      url: 'https://server.marceaub.lat:3000',
     },
     {
       title: 'PufferPanel',
       description: 'Game Server Management',
-      url: 'http://server.marceaub.lat:8080',
+      url: 'https://server.marceaub.lat:8080',
+    },
+    {
+      title: 'Minecraft Server Domain',
+      description: 'Get my server domain at play.marceaub.lat',
+      url: 'play.marceaub.lat',
     },
     {
       title: 'Plex Media Server',
@@ -33,7 +38,7 @@ const config = {
     {
       title: 'Main Domain',
       description: 'Back to marceaub.lat',
-      url: 'https://marceaub.lat',
+      url: 'https://www.marceaub.lat',
     },
   ],
 };
