@@ -23,7 +23,7 @@ const config = {
     {
       title: 'PufferPanel',
       description: 'Game Server Management',
-      url: 'https://server.marceaub.lat:8080',
+      url: 'https://server.marceaub.lat:8443',
     },
     {
       title: 'Minecraft Server Domain',
@@ -33,7 +33,7 @@ const config = {
     {
       title: 'Plex Media Server',
       description: 'Media Server with personal content library',
-      url: 'http://server.marceaub.lat:32400',
+      url: 'https://server.marceaub.lat:32400',
     },
     {
       title: 'Main Domain',
