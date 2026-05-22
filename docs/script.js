@@ -26,6 +26,11 @@ const config = {
       url: 'http://server.marceaub.lat:8080',
     },
     {
+      title: 'Plex Media Server',
+      description: 'Media Server with personal content library',
+      url: 'http://server.marceaub.lat:32400',
+    },
+    {
       title: 'Main Domain',
       description: 'Back to marceaub.lat',
       url: 'https://marceaub.lat',
